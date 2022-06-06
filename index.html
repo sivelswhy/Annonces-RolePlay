@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
     <link rel="apple-touch-icon" href="/assets/img/téléchargement.jpg">
-    <link rel="icon" type="image/png" href="/assets/img/téléchargement.jpg" />
+    <!-- <link rel="icon" type="image/png" href="/assets/img/téléchargement.jpg" /> -->
     <title>Annonce Centrale</title>
     <link rel="manifest" href="manifest.json" />
+    
 </head>
 <body>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="script.js" defer></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3S62TTDK8Q"></script>
     <script>
@@ -18,51 +21,58 @@
             navigator.serviceWorker.register('/sw.js')
         }
     </script>
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-
-
-
+<!-- <button onclick="topFunction()" id="myBtn" title="Go to top"">Top</button> -->
         <div class="divheader">
             <h1>Annonces L.S.P.D</h1>
         </div> 
         <br> <br>
-        <h2 id="#sommaire">Sommaire</h2>
-        <ul>
+        <details class="maj">
+            <summary> Notes de Mise à Jour</summary>
+            <ul>
+                <li>06/06/2022 : Ajout d'un menu déroulant pour les élements dans le sommaire : "Décollage PH, Attérissage PH et StandBy PH",  Ajout d'un élement de "Notes de mise à jour" en haut de la page, Ajout d'un Footer (pied de page) avec des élements à titre informatif.</li> 
+            </ul>
+        </details>
+        <h2 id="#sommaire" class="textp">Sommaire</h2>
+        <ul style="list-style: none;" class="sommaire">
             <li><a href="#appel911">Appel 911</a></li>
             <li> <a href="#avocconvoc">Demande D'avocat - Convocation</a></li>
             <li> <a href="#barrages">Barrages</a></li>
             <li> <a href="#rds">Rapport de Situation</a></li>
-            <li> <a href="#"></a><ul>
-                <a href="#decollage">Décollage PH</a>
-                <li> <a href="#decomiss">Mission Row</a></li>
-                <li> <a href="#decovine">Vinewood</a></li>
-                <li> <a href="#decovesp">Vespucci</a></li>
-                <li> <a href="#decopal">Paleto Bay</a></li>
-                <li> <a href="#decoiaa">I.A.A</a></li>
-                <li> <a href="#decoport">Port</a></li>
-                <li> <a href="#decosandy">Sandy Shores</a></li>
-                <li> <a href="#decohop">Hôpital</a></li>
-            </ul></li>
-            <li> <a href="#"></a><ul>
-                <a href="atterissage">Attérissage PH</a>
-                <li> <a href="#attmiss">Mission Row</a></li>
-                <li> <a href="#attvine">Vinewood</a></li>
-                <li> <a href="#attvesp">Vespucci</a></li>
-                <li> <a href="#attpal">Paleto Bay</a></li>
-                <li> <a href="#attiaa">I.A.A</a></li>
-                <li> <a href="#attport">Port</a></li>
-                <li> <a href="#attsandy">Sandy Shores</a></li>
-                <li> <a href="#atthop">Hôpital</a></li>
-            </ul></li>
-            <li> <ul>
-                <a href="">Standby PH</a>
-                <li> <a href="#standmiss">Mission Row</a></li>
-                <li> <a href="#standvine">Vinewood</a></li>
-                <li> <a href="#standves">Vespucci</a></li>
-             <li> <a href="#standdav">Poste de Shériff Davis</a></li>
-             <li> <a href="#standpal">Paleto Bay</a></li>
-            </ul></li>
-        </ul>
+                <li><details>
+                    <summary>Décollage PH</summary>
+                    <li> <ion-icon name="chevron-forward-outline"></ion-icon> <a href="#decomiss">Mission Row</a></li>
+                    <li> <ion-icon name="chevron-forward-outline"></ion-icon> <a href="#decovine">Vinewood</a></li>
+                    <li> <ion-icon name="chevron-forward-outline"></ion-icon> <a href="#decovesp">Vespucci</a></li>
+                    <li> <ion-icon name="chevron-forward-outline"></ion-icon> <a href="#decopal">Paleto Bay</a></li>
+                    <li> <ion-icon name="chevron-forward-outline"></ion-icon> <a href="#decoiaa">I.A.A</a></li>
+                    <li> <ion-icon name="chevron-forward-outline"></ion-icon> <a href="#decoport">Port</a></li>
+                    <li> <ion-icon name="chevron-forward-outline"></ion-icon> <a href="#decosandy">Sandy Shores</a></li>
+                    <li> <ion-icon name="chevron-forward-outline"></ion-icon> <a href="#decohop">Hôpital</a></li>
+                </details>
+            <li> <a href="#"></a>
+                <li>
+                    <details>
+                        <summary>Attérissage PH</summary>
+                        <li> <ion-icon name="chevron-forward-outline"></ion-icon> <a href="#attmiss">Mission Row</a></li>
+                        <li> <ion-icon name="chevron-forward-outline"></ion-icon> <a href="#attvine">Vinewood</a></li>
+                        <li> <ion-icon name="chevron-forward-outline"></ion-icon> <a href="#attvesp">Vespucci</a></li>
+                        <li> <ion-icon name="chevron-forward-outline"></ion-icon> <a href="#attpal">Paleto Bay</a></li>
+                        <li> <ion-icon name="chevron-forward-outline"></ion-icon> <a href="#attiaa">I.A.A</a></li>
+                        <li> <ion-icon name="chevron-forward-outline"></ion-icon> <a href="#attport">Port</a></li>
+                        <li> <ion-icon name="chevron-forward-outline"></ion-icon> <a href="#attsandy">Sandy Shores</a></li>
+                        <li> <ion-icon name="chevron-forward-outline"></ion-icon> <a href="#atthop">Hôpital</a></li>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Standby PH</summary>
+                        <li> <ion-icon name="chevron-forward-outline"></ion-icon> <a href="#standmiss">Mission Row</a></li>
+                        <li> <ion-icon name="chevron-forward-outline"></ion-icon> <a href="#standvine">Vinewood</a></li>
+                        <li> <ion-icon name="chevron-forward-outline"></ion-icon> <a href="#standves">Vespucci</a></li>
+                     <li> <ion-icon name="chevron-forward-outline"></ion-icon> <a href="#standdav">Poste de Shériff Davis</a></li>
+                     <li> <ion-icon name="chevron-forward-outline"></ion-icon> <a href="#standpal">Paleto Bay</a></li>
+                    </details>
+                </li>
         <div class="textp" id="appel911">
             <h3>
                 Appel 911
@@ -172,6 +182,14 @@ Merci de votre compréhension
         <code id="standves">/f</code> De PH1 | Actuellement en StandBy au commissariat de Vespucci <hr>
             <code id="standdav">/f</code> De PH1 | Actuellement en StandBy au poste de shérif de Davis <hr>
 <code id="standpal">/911</code> De PH1 | Actuellement en StandBy au poste de shérif de Paleto Bay
+</div>
+<br><br><br><br>
+<div class="footer">
+    <ul style="list-style: none;">
+        <li><ion-icon name="accessibility-outline"></ion-icon> Fait avec amour par <a href="https://github.com/sivelswhy">Sivels</a></li>
+        <li><a href="https://github.com/sivelswhy/centralelspd"><ion-icon name="git-branch-outline"></ion-icon> Lien du projet GitHub</a></li>
+        <li><a href="https://ko-fi.com/sivelswhy"><ion-icon name="cafe-outline"></ion-icon> Me Soutenir</a></li>
+    </ul>
 
 </div>
 </body>
