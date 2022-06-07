@@ -6,6 +6,10 @@ gtag('config', 'G-3S62TTDK8Q');
 
 var mybutton = document.getElementById("myBtn");
 
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js')
+}
+
 // When the user scrolls down 20px from the top of the document, show the button
 // window.onscroll = function() {scrollFunction()};
 
@@ -27,5 +31,5 @@ function copyEvent(id) {
   var str = document.getElementById(id)
   window.getSelection().selectAllChildren(str)
   document.execCommand("Copy")
-  window.alert("J'ai copié " + id)
+  window.alert("J'ai copié le texte !")
 }

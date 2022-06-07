@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V18BS8M2CK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-V18BS8M2CK');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
-    <link rel="apple-touch-icon" href="/assets/img/téléchargement.jpg">
+    <link rel="apple-touch-icon" href="/assets/img/logo-lspd.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://annoncelspd.vercel.app/">
     <meta property="og:title" content="Annonce Centrale">
     <meta property="og:description" content="Retrouvez en un seul endroit toutes les annonces que vous avez besoin en L.S.P.D sur la CTG">
-    <meta property="og:image" content="">
+    <meta property="og:image" content="/assets/img/logo-lspd.png">
+    <link rel="icon" type="image/png" href="/assets/img/logo-lspd.png">
+    <meta name="theme_color" content="#1ebbeb">
+    <meta name="description" content="Outil permettant de générer facillement les annonces de centrale pour le serveur RP CTG">
     
     <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
@@ -42,8 +53,8 @@
         <details class="maj">
             <summary> Notes de Mise à Jour</summary>
             <ul>
-                <li><i>En court de développement : pouvoir choisir la date depuis le site</i></li>
-                <li>07/06/2022 : Ajout d'un bouton pour copier les annonces.</li>
+                <li><i>En court de développement : pouvoir choisir la date depuis le site et d'autres paramètres pour les annonces permettant de les customiser</i></li>
+                <li>07/06/2022 : Ajout d'un bouton pour copier les annonces + support du protocole <a href="https://ogp.me/" target="_blank" >Open Graph + Ajout de la possibilité d'installer le Site Web en tant qu'application.</a></li>
                 <li>06/06/2022 : Ajout d'un menu déroulant pour les élements dans le sommaire : "Décollage PH, Attérissage PH et StandBy PH",  Ajout d'un élement de "Notes de mise à jour" en haut de la page, Ajout d'un Footer (pied de page) avec des élements à titre informatif.</li> 
             </ul>
         </details>
@@ -95,15 +106,15 @@
             <hr>
             <p id="test"><code>/annonce</code> Chers concitoyens, Pour rappel, tout 911 nous étant destiné,
                 merci de préciser la ou les raison(s) + la position + information(s) complémentaire(s) sur la situation.
-                Sans cela, il nous est impossible de vous retrouver et / ou de vous aider. Merci de votre compréhension <button onclick="copyEvent('test')" class="copybtn">Copier</button></p> 
+                Sans cela, il nous est impossible de vous retrouver et / ou de vous aider. Merci de votre compréhension. </p> <button onclick="copyEvent('test')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button>
                 <!-- <p><i><strong>Ou</strong></i></p> -->
                 <hr>
                 <p id="test2">
                     <code>/annonce</code> Bonjour, Pour tout appel nous voyant destiné via le canal 911.
 Merci de préciser la position la plus précise (prioriser les positions indiquées sur la carte de la ville)
 et une rapide mise en situation de la raison de l’appel. Sachez qu' une formule de politesse est toujours appréciée.
-Merci de votre compréhension. <button onclick="copyEvent('test2')" class="copybtn">Copier</button>
-                </p>
+Merci de votre compréhension. </p> <button onclick="copyEvent('test2')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button>
+                
         </div>
         <div class="textp" id="avocconvoc">
             <h3>
@@ -111,15 +122,15 @@ Merci de votre compréhension. <button onclick="copyEvent('test2')" class="copyb
             </h3>
             <hr>
             <p id="avoc1"><code>/annonce</code> Bonjour, un avocat commis d’office est actuellement demandé
-                au commissariat de Mission Row, Merci d’avance <button onclick="copyEvent('avoc1')" class="copybtn">Copier</button></p>
+                au commissariat de Mission Row, Merci d’avance. </p><button onclick="copyEvent('avoc1')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button>
             <hr>
             <p id="avoc2">
             <code>/annonce</code> Bonjour, un avocat commis d’office est actuellement demandé
-au Poste de Shérif de Paleto Bay, Merci d’avance <button onclick="copyEvent('avoc2')" class="copybtn">Copier</button></p>
+au Poste de Shérif de Paleto Bay, Merci d’avance. </p><button onclick="copyEvent('avoc2')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button>
 <hr>
 <p id="avoc3">
 <code>/annonce</code> Mr.  est convoqué au Poste de Police de Mission Row et
-est prié de s’y présenter dans les plus brefs délais, Merci de votre compréhension <button onclick="copyEvent('avoc3')" class="copybtn">Copier</button></p>
+est prié de s’y présenter dans les plus brefs délais, Merci de votre compréhension.</p><button onclick="copyEvent('avoc3')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button>
 <hr>
         </div>
         <div class="textp" id="barrages">
@@ -128,13 +139,13 @@ est prié de s’y présenter dans les plus brefs délais, Merci de votre compr�
             <p id="barr1">
             <code>/annonce</code> Chers concitoyens, un barrage a été mis en place.
 Toute personne forçant celui-ci, sera abattu sans sommations. De la même manière, toute personne paraissant suspecte,
-recevra des tirs de sommation. Merci de votre compréhension. <button onclick="copyEvent('barr1')" class="copybtn">Copier</button></p>
+recevra des tirs de sommation. Merci de votre compréhension. </p><button onclick="copyEvent('barr1')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button>
 <hr>
 <p id="barr2">
 <code>/annonce</code> Chers concitoyens, pour rappel : un barrage a été mis en place.
 Toute personne forçant celui-ci, sera abattu sans sommations.
 De la même manière, toute personne paraissant suspecte
-recevra des tirs de sommation. Merci de votre compréhension. <button onclick="copyEvent('barr2')" class="copybtn">Copier</button></p>
+recevra des tirs de sommation. Merci de votre compréhension. </p><button onclick="copyEvent('barr2')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button>
         </div>
         <div class="textp" id="rds">
         <h3>
@@ -145,71 +156,68 @@ recevra des tirs de sommation. Merci de votre compréhension. <button onclick="c
         <code>/f</code> Je rappelle que toutes patrouilles ne répondant pas aux appels de la centrale
 après 2 appels vocaux avec numéro de patrouille + 1 appel vocal avec nom des agents
 puis 1 appel textuel avec numéro de patrouille + nom des agents,
-se verra dissoute. <button onclick="copyEvent('rds1')" class="copybtn">Copier</button></p>
+se verra dissoute. </p><button onclick="copyEvent('rds1')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button>
 <hr>
 <p id="rds2">
 <code>/f</code> De Centrale j’effectuerai les rapports de situation à <code>XX:XX</code>.
 Merci de laisser activer votre radio à ce moment-là.
-Merci de votre compréhension. <button onclick="copyEvent('rds2')" class="copybtn">Copier</button></p>
+Merci de votre compréhension. </p><button onclick="copyEvent('rds2')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button>
 <hr>
 <p id="rds3"><code>/f</code> De Centrale je vais entamer les rapports de situation.
     Merci d’activer votre radio si cela n’est pas déjà fait pour faciliter ceux-ci.
-    Merci de votre compréhension. <button onclick="copyEvent('rds3')" class="copybtn">Copier</button></p>
+    Merci de votre compréhension. </p><button onclick="copyEvent('rds3')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button>
     <hr>
-    <p id="rds4"><code>/f</code> Centrale -> P<code>X</code> | Rapport de situation S.V.P <button onclick="copyEvent('rds4')" class="copybtn">Copier</button></p>
+    <p id="rds4"><code>/f</code> Centrale -> P<code>X</code> | Rapport de situation S.V.P </p><button onclick="copyEvent('rds4')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button>
 </div>
 <h1>Patrouille Héliportée</h1>
 <div class="textp" id="decollage">
     <h3>Décollage</h3><hr>
-    <p> <p id="decomiss"><code>/f</code> De PH1 | Décollage du commissariat de Mission Row. <button onclick="copyEvent('decomiss')" class="copybtn">Copier</button></p>
+    <p> <p id="decomiss"><code>/f</code> De PH1 | Décollage du commissariat de Mission Row. </p><button onclick="copyEvent('decomiss')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button>
 
         <hr>
-        <p id="decovine"><code>/f</code> De PH1 | Décollage du commissariat de Vinewood. <button onclick="copyEvent('decovine')" class="copybtn">Copier</button></p>
+        <p id="decovine"><code>/f</code> De PH1 | Décollage du commissariat de Vinewood. </p><button onclick="copyEvent('decovine')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button>
         <hr>
 
-        <p id="decovesp"><code>/f</code> De PH1 | Décollage du commissariat de Vespucci. <button onclick="copyEvent('decovesp')" class="copybtn">Copier</button></p>
+        <p id="decovesp"><code>/f</code> De PH1 | Décollage du commissariat de Vespucci. </p> <button onclick="copyEvent('decovesp')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button>
+        <hr>
+        <p id="decopal"><code>/911</code> *LSPD* to *LSSD* De PH1 | Décollage du poste de shérif de Paleto Bay. </p><button onclick="copyEvent('decopal')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button>
 
         <hr>
-        <p id="decopal"><code>/911</code> *LSPD* to *LSSD* De PH1 | Décollage du poste de shérif de Paleto Bay. <button onclick="copyEvent('decopal')" class="copybtn">Copier</button></p>
+        <p id="decoiaa"><code>/f</code> De PH1 | Décollage de l’IAA. </p><button onclick="copyEvent('decoiaa')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button>
 
         <hr>
-        <p id="decoiaa"><code>/f</code> De PH1 | Décollage de l’IAA. <button onclick="copyEvent('decoiaa')" class="copybtn">Copier</button></p>
+        <p id="decoport"><code>/f</code> De PH1 | Décollage de l'hélipad du port. </p><button onclick="copyEvent('decoport')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button> <hr>
+        <p id="decosandy"><code>/911</code> De PH1 | Décollage de l’aérodrome de Sandy Shores. </p><button onclick="copyEvent('decosandy')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button>
 
         <hr>
-        <p id="decoport"><code>/f</code> De PH1 | Décollage de l'hélipad du port. <button onclick="copyEvent('decoport')" class="copybtn">Copier</button> <hr></p>
-        <p id="decosandy"><code>/911</code> De PH1 | Décollage de l’aérodrome de Sandy Shores. <button onclick="copyEvent('decosandy')" class="copybtn">Copier</button></p>
-
-        <hr>
-        <p id="decohop"><code>/f</code> De PH1 | Décollage de l'hôpital. <button onclick="copyEvent('decohop')" class="copybtn">Copier</button></p><strong>▬▬▬▬▬▬</strong>
-    <p id="decohop2"><code>/medic</code> *LSPD* to *LSMS* De PH LSPD | Nous allons décoller du toit de l'hôpital. <button onclick="copyEvent('decohop2')" class="copybtn">Copier</button></p>
+        <p id="decohop"><code>/f</code> De PH1 | Décollage de l'hôpital. </p><button onclick="copyEvent('decohop')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button><br><strong>▬▬▬▬▬▬</strong>
+    <p id="decohop2"><code>/medic</code> *LSPD* to *LSMS* De PH LSPD | Nous allons décoller du toit de l'hôpital. </p><button onclick="copyEvent('decohop2')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button>
     
 </div>
 <div class="textp" id="atterissage">
     <h3>Attérissage</h3><hr>
-<p id="attmiss"><code>/f</code> De PH1 | Atterrissage au commissariat de Mission Row <button onclick="copyEvent('attmiss')" class="copybtn">Copier</button></p> <hr>
-<p id="attvine"><code>/f</code> De PH1 | Atterrissage au commissariat de Vinewood <button onclick="copyEvent('attvine')" class="copybtn">Copier</button></p> <hr>
-<p id="attvesp"><code>/f</code> De PH1 | Atterrissage au commissariat de Vespucci <button onclick="copyEvent('attvesp')" class="copybtn">Copier</button></p> <hr>
-<p id="attpal"><code>/911</code> *LSPD* to *LSSD* De PH1 | Atterrissage au poste de shérif de Paleto Bay <button onclick="copyEvent('attpal')" class="copybtn">Copier</button></p> <hr>
-<p id="attiaa"><code>/f</code> De PH1 | Atterrissage à l’IAA <button onclick="copyEvent('attiaa')" class="copybtn">Copier</button></p> <hr>
-<p id="attport"><code>/f</code> De PH1 | Atterrissage à l'hélipad du port <button onclick="copyEvent('attport')" class="copybtn">Copier</button></p> <hr>
-<p id="attsandy"><code>/911</code> De PH1 | Atterrissage à l’aérodrome de Sandy Shores <button onclick="copyEvent('attsandy')" class="copybtn">Copier</button></p> <hr>
-<p id="atthop"><code>/f</code> De PH1 | Atterrissage à l'hôpital. <button onclick="copyEvent('atthop')" class="copybtn">Copier</button></p> <strong>▬▬▬▬▬▬</strong>
-<p id="atthop2"><code>/medic</code> *LSPD* to *LSMS* De PH1 | Nous allons atterrir sur le toit de l'hôpital. <button onclick="copyEvent('atthop2')" class="copybtn">Copier</button></p>
-</div>
+<p id="attmiss"><code>/f</code> De PH1 | Atterrissage au commissariat de Mission Row </p><button onclick="copyEvent('attmiss')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button> <hr>
+<p id="attvine"><code>/f</code> De PH1 | Atterrissage au commissariat de Vinewood </p><button onclick="copyEvent('attvine')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button> <hr>
+<p id="attvesp"><code>/f</code> De PH1 | Atterrissage au commissariat de Vespucci </p> <button onclick="copyEvent('attvesp')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button><hr>
+<p id="attpal"><code>/911</code> *LSPD* to *LSSD* De PH1 | Atterrissage au poste de shérif de Paleto Bay </p><button onclick="copyEvent('attpal')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button> <hr>
+<p id="attiaa"><code>/f</code> De PH1 | Atterrissage à l’IAA </p><button onclick="copyEvent('attiaa')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button> <hr>
+<p id="attport"><code>/f</code> De PH1 | Atterrissage à l'hélipad du port </p><button onclick="copyEvent('attport')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button> <hr>
+<p id="attsandy"><code>/911</code> De PH1 | Atterrissage à l’aérodrome de Sandy Shores </p><button onclick="copyEvent('attsandy')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button> <hr>
+<p id="atthop"><code>/f</code> De PH1 | Atterrissage à l'hôpital. </p><button onclick="copyEvent('atthop')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button><br><strong>▬▬▬▬▬▬</strong>
+<p id="atthop2"><code>/medic</code> *LSPD* to *LSMS* De PH1 | Nous allons atterrir sur le toit de l'hôpital. </p><button onclick="copyEvent('atthop2')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button></div>
 <div id="standby" class="textp">
     <h3>Standby</h3><hr>
-    <p id="standmiss"><code>/f</code> De PH1 | Actuellement en StandBy au commissariat de Mission Row.  <button onclick="copyEvent('standmiss')" class="copybtn">Copier</button></p> <hr>
-    <p id="standvine"><code>/f</code> De PH1 | Actuellement en StandBy au commissariat de Vinewood. <button onclick="copyEvent('standvine')" class="copybtn">Copier</button></p> <hr>
-    <p id="standves"><code>/f</code> De PH1 | Actuellement en StandBy au commissariat de Vespucci. <button onclick="copyEvent('standves')" class="copybtn">Copier</button></p> <hr>
-    <p id="standdav"><code>/f</code> De PH1 | Actuellement en StandBy au poste de shérif de Davis. <button onclick="copyEvent('standdav')" class="copybtn">Copier</button></p> <hr>
-    <p id="standpal"><code>/911</code> De PH1 | Actuellement en StandBy au poste de shérif de Paleto Bay. <button onclick="copyEvent('standpal')" class="copybtn">Copier</button></p>
-</div>
+    <p id="standmiss"><code>/f</code> De PH1 | Actuellement en StandBy au commissariat de Mission Row.  </p><button onclick="copyEvent('standmiss')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button><hr>
+    <p id="standvine"><code>/f</code> De PH1 | Actuellement en StandBy au commissariat de Vinewood. </p><button onclick="copyEvent('standvine')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button><hr>
+    <p id="standves"><code>/f</code> De PH1 | Actuellement en StandBy au commissariat de Vespucci. </p><button onclick="copyEvent('standves')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button><hr>
+    <p id="standdav"><code>/f</code> De PH1 | Actuellement en StandBy au poste de shérif de Davis. </p><button onclick="copyEvent('standdav')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button><hr>
+    <p id="standpal"><code>/911</code> De PH1 | Actuellement en StandBy au poste de shérif de Paleto Bay. </p><button onclick="copyEvent('standpal')" class="copybtn"><ion-icon name="clipboard-outline"></ion-icon> Copier</button></div>
 <br><br><br><br>
 <div class="footer">
     <ul style="list-style: none;">
-        <li><ion-icon name="accessibility-outline"></ion-icon> Fait avec amour par <a href="https://github.com/sivelswhy">Sivels</a></li>
-        <li><a href="https://github.com/sivelswhy/centralelspd"><ion-icon name="git-branch-outline"></ion-icon> Lien du projet GitHub</a></li>
-        <li><a href="https://ko-fi.com/sivelswhy"><ion-icon name="cafe-outline"></ion-icon> Me Soutenir</a></li>
+        <li><ion-icon name="accessibility-outline"></ion-icon> Fait avec amour par <a href="https://github.com/sivelswhy" target="_blank">Sivels</a></li>
+        <li><a href="https://github.com/sivelswhy/centralelspd" target="_blank"><ion-icon name="git-branch-outline"></ion-icon> Lien du projet GitHub</a></li>
+        <li><a href="https://ko-fi.com/sivelswhy" target="_blank"><ion-icon name="cafe-outline"></ion-icon> Me Soutenir</a></li>
     </ul>
 
 </div>

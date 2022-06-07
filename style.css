@@ -118,3 +118,10 @@ html {
   summary {
       cursor: pointer;
   }
+  .copybtn {
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      text-decoration: none;
+      border: none;
+      background-color: #006cf8;
+      border-radius: 3px;
+  }
