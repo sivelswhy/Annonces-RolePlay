@@ -30,6 +30,9 @@ if('serviceWorker' in navigator) {
 function copyEvent(id) {
   var str = document.getElementById(id)
   window.getSelection().selectAllChildren(str)
-  document.execCommand("Copy")
-  window.alert("J'ai copié le texte !")
+  navigator.clipboard.writeText(str.innerText).then(function() {
+    alert(`J'ai bien copié le texte suivant :\n\n${str.innerText}`)
+  }, function(err) {
+    alert(`Bip Bioup :  Je n'ai pas pu copier le texte et j'ai reçu l'erreur suivante :\n\n${err}`)
+  });
 }
